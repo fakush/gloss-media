@@ -1,0 +1,7 @@
+.LoginWidgetAlign {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}

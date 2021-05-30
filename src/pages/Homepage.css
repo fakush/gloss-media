@@ -1,0 +1,40 @@
+.HomePageGlobals {
+  margin-top: 25px;
+}
+
+.HomeMainImage {
+  margin: auto;
+  width: 100%;
+}
+
+.HomPageText {
+  text-align: center;
+  font-weight: 400;
+}
+
+.HomeSearchButton {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.11);
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+
+.HomeSearchText{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.HomeSearchIcon{
+    margin: 5px;
+    height: 35px;
+}

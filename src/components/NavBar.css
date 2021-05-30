@@ -1,0 +1,32 @@
+.NavBar {
+    margin: 0;
+    padding: 0;
+    background-color: white !important;
+    font-weight: 600;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+}
+
+.NavBar-NavBarBrand {
+    width: 20%;
+    cursor: pointer;
+}
+
+.NavBar-Links {
+    justify-content: center;
+    width: 100%;
+}
+
+
+.NavBar-Links-Link {
+    margin: 20px;
+}
+
+.NavBar-Widgets {
+    width: 20%;
+    display: flex;
+    justify-content:flex-end;
+}
