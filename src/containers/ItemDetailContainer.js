@@ -45,7 +45,7 @@ export default function ItemDetailContainer({ id }) {
   
   return (
     <div>
-      <ItemDetailComponent title={item[0].CODIGO} item={item[0]} count={count} />
+      <ItemDetailComponent title={item[0].Codigo} item={item[0]} count={count} />
       {/* <ItemCount onAdd={setCount} count={count} showCounter={showCounter} /> */}
       {count > 0 && (
         <Button className="button" variant="dark" onClick={onAdd}>

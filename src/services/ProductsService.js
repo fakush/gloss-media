@@ -1,5 +1,5 @@
 import { db } from "./Firebase";
-const itemCollection = db.collection("test_db2");
+const itemCollection = db.collection("test_db3");
 
 export function getItems() {
   return itemCollection.get().then((snapshot) => {
@@ -14,7 +14,7 @@ export function getItemsByCategory(subCategory) {
 }
 
 export function getItemById(id) {
-  return itemCollection.where("CODIGO", "==", `${id}`).get().then((snapshot) => {
+  return itemCollection.where("Codigo", "==", `${id}`).get().then((snapshot) => {
     return snapshot.docs.map(doc => doc.data());
   });
 }
