@@ -1,4 +1,5 @@
 import React from 'react';
+import './CounterWidget.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button";
@@ -7,15 +8,15 @@ export default function CounterWidget({ onAdd, showCounter, count }) {
     if (!showCounter) return null;
 
     return (
-        <Row>
-            <Col>
+        <Row className="CounterBlock">
+            <Col className="CounterButton">
                 <Button variant="danger" onClick={() => onAdd(count - 1)}>-</Button>
             </Col>
-            <Col>
+            <Col className="CounterButton">
                 <Button variant="light">{count}</Button>
             </Col>
-            <Col>
-                <Button variant="success" onClick={() => onAdd(count - 1)}>+</Button>
+            <Col className="CounterButton">
+                <Button variant="success" onClick={() => onAdd(count + 1)}>+</Button>
             </Col>
         </Row>
     )

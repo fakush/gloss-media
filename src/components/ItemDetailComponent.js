@@ -7,66 +7,67 @@ import Image from 'react-bootstrap/Image'
 import MapWidget from "../widgets/MapWidget";
 import ReferenciasWidget from "../widgets/ReferenciasWidget";
 
-export default function ItemDetailComponent({ title, item, count }) {
+export default function ItemDetailComponent({ item, count }) {
+  
   return (
     <Card className="CardBody">
-      <h6 className="">Código: {title}</h6>
+      <h6 className="">Código: {item.id}</h6>
       <Row className="ItemBody">
-        <h6 className="BodyTextPill">{item.Ubicacion}</h6>
+        <h6 className="BodyTextPill">{item.location}</h6>
         <Col className="col-md-6 BodyImage">
-        {/* <Image src={require(`../assets/img/Items/${item.Codigo}.jpg`)} alt="Imagen" fluid/> */}
+        {/* <Image src={require(`../assets/img/Items/${item.id}.jpg`)} alt="Imagen" fluid/> */}
           <Image className="" src="https://picsum.photos/1000/1000" alt="Imagen" fluid/>
         </Col>
         <Col className="col-md-6">
           <Row className="BodyTextRow">
             <div className="col-md-6">
-              <h6 className="BodyTextPill">Zona: {item.Zona}</h6>
+              <h6 className="BodyTextPill">Zona: {item.zone}</h6>
             </div>
             <div className="col-md-6">
-              <h6 className="BodyTextPill">Region: {item.Region}</h6>
-            </div>
-          </Row>
-          <Row>
-            <div className="col-md-6">
-              <h6 className="BodyTextPill">Formato: {item.Formato}</h6>
-            </div>
-            <div className="col-md-6">
-              <h6 className="BodyTextPill">Acciones: {item.Accion}</h6>
+              <h6 className="BodyTextPill">Region: {item.region}</h6>
             </div>
           </Row>
           <Row>
             <div className="col-md-6">
-              <h6 className="BodyTextPill">Segmento: {item.Segmento}</h6>
+              <h6 className="BodyTextPill">Formato: {item.format}</h6>
+            </div>
+            <div className="col-md-6">
+              <h6 className="BodyTextPill">Acciones: {item.action}</h6>
+            </div>
+          </Row>
+          <Row>
+            <div className="col-md-6">
+              <h6 className="BodyTextPill">Segmento: {item.segment}</h6>
             </div>
             <div className="col-md-6">
               <h6 className="BodyTextPill">
-                Presupuesto: ${item.Presupuesto}.000
+                Presupuesto: ${item.budget}.000
               </h6>
             </div>
           </Row>
           <Row>
             <div className="col-md-6">
-              <h6 className="BodyTextPill">Material: {item.Material}</h6>
+              <h6 className="BodyTextPill">Material: {item.material}</h6>
             </div>
             <div className="col-md-6">
-              <h6 className="BodyTextPill">Caras/Salidas: {item.Caras}</h6>
+              <h6 className="BodyTextPill">Caras/Salidas: {item.faces}</h6>
             </div>
           </Row>
           <Row>
             <div className="col-md-6">
-              <h6 className="BodyTextPill">Base: {item.Base}m.</h6>
+              <h6 className="BodyTextPill">Base: {item.width}m.</h6>
             </div>
 
             <div className="col-md-6">
-              <h6 className="BodyTextPill">Altura: {item.Altura}m.</h6>
+              <h6 className="BodyTextPill">Altura: {item.height}m.</h6>
             </div>
           </Row>
           
-          <h6 className="BodyTextPill">Referencias: {<ReferenciasWidget referencias={item.Referencias}/>}</h6>
+          <h6 className="BodyTextPill">Referencias: {<ReferenciasWidget referencias={item.references}/>}</h6>
           <div className="MapPill">
-            <MapWidget Latitud={item.Latitud} Longitud= {item.Longitud} />
+            <MapWidget Latitud={item.latitude} Longitud= {item.longitude} />
           </div>
-          <h6 className="NotaTextPill">Nota: {item.NOTA}</h6>
+          <h6 className="NotaTextPill">Nota: {item.notes}</h6>
         </Col>
       </Row>
     </Card>

@@ -12,11 +12,11 @@ export default function OportunidadesCard({item}) {
         <Card.Img variant="top" src="https://picsum.photos/400/300" />
         <Card.Body className="CardBody">
           <Card.Text>
-              Region: {item.Region} <br />
-              Zona: {item.Zona}<br />
-              Dirección: {item.Ubicacion}<br />
+              Region: {item.region} <br />
+              Zona: {item.zone}<br />
+              Dirección: {item.location}<br />
           </Card.Text>
-          <Button className="BotonMasInfo" onClick={() => history.push(`/planifica/detalle/${item.Codigo}`)}>+ Info</Button>
+          <Button className="BotonMasInfo" onClick={() => history.push(`/planifica/detalle/${item.id}`)}>+ Info</Button>
         </Card.Body>
       </Card>
   );

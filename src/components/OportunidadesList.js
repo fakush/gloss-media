@@ -8,7 +8,7 @@ export default function OportunidadesList({items}) {
     <CardDeck className="CardDeck">
         {items.map((item) => {
             return (
-                <OportunidadesCard key={item.Codigo} item={item} />
+                <OportunidadesCard key={item.id} item={item} />
             )
         })}
     </CardDeck>

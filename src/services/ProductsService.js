@@ -1,5 +1,5 @@
 import { db } from "./Firebase";
-const itemCollection = db.collection("db_06_2021");
+const itemCollection = db.collection("gloss_db");
 let filteredCollection = itemCollection;
 
 export function getItems() {
@@ -13,7 +13,7 @@ export function getFilteredItems(data) {
   data[0] !== "Referencias" ? (filteredCollection = filteredCollection.where(
     `${data[0]}`, "==", `${data[1]}`)
         ) : (filteredCollection = filteredCollection.where(
-        "Referencias", "array-contains", `${data[1]}`
+        "references", "array-contains", `${data[1]}`
       ));
   return filteredCollection.get().then((snapshot) => {
     return snapshot.docs.map((doc) => doc.data());
@@ -21,7 +21,7 @@ export function getFilteredItems(data) {
 }
 
 export function getItemById(id) {
-  return itemCollection.where("Codigo", "==", `${id}`).get().then((snapshot) => {
+  return itemCollection.where("id", "==", `${id}`).get().then((snapshot) => {
       return snapshot.docs.map((doc) => doc.data());
     });
 }

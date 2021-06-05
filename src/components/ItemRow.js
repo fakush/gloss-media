@@ -4,10 +4,9 @@ import { useHistory } from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import ReferenciasWidget from "../widgets/ReferenciasWidget";
-
+import AddToOrderWidget from '../widgets/AddToOrderWidget';
 
 export default function ItemRow({ item }) {
   let history = useHistory();
@@ -15,17 +14,17 @@ export default function ItemRow({ item }) {
   return (
     <ListGroup.Item>
       <Row className="ItemRowContainer">
-          <Col></Col>
-          <Col className="EstiloTexto">{item.Codigo}</Col>
-          <Col className="EstiloTexto">{item.Region.toLowerCase()}</Col>
-          <Col className="EstiloTexto">{item.Zona.toLowerCase()}</Col>
-          <Col className="EstiloTexto" lg="2">{item.Ubicacion.toLowerCase()}</Col>
-          <Col className="EstiloTexto">{item.Formato}</Col>
-          <Col className="EstiloTexto">{item.Accion}</Col>
-          <Col lg="2"><ReferenciasWidget referencias={item.Referencias} /></Col>
-          <Col className="EstiloTexto">$ {item.Presupuesto}.000</Col>
+          <Col><AddToOrderWidget item={item}/></Col>
+          <Col className="EstiloTexto">{item.id}</Col>
+          <Col className="EstiloTexto">{item.region.toLowerCase()}</Col>
+          <Col className="EstiloTexto">{item.zone.toLowerCase()}</Col>
+          <Col className="EstiloTexto" lg="2">{item.location.toLowerCase()}</Col>
+          <Col className="EstiloTexto">{item.format}</Col>
+          <Col className="EstiloTexto">{item.action}</Col>
+          <Col lg="2"><ReferenciasWidget referencias={item.references} /></Col>
+          <Col className="EstiloTexto">$ {item.budget}.000</Col>
           <Col>
-            <Button className="BotonMasInfo" onClick={() => history.push(`/planifica/detalle/${item.Codigo}`)}>+ Info</Button>
+            <Button className="BotonMasInfo" onClick={() => history.push(`/planifica/detalle/${item.id}`)}>+ Info</Button>
           </Col>
       </Row>
     </ListGroup.Item>

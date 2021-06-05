@@ -10,6 +10,7 @@ import LoginPage from "./LoginPage";
 import Footer from "../components/Footer";
 import ItemDetailPage from "./ItemDetailPage";
 import IdeasPage from "./IdeasPage";
+import CheckoutPage from './CheckoutPage';
 
 export default function AppRouter() {
   return (
@@ -40,6 +41,9 @@ export default function AppRouter() {
         </Route>
         <Route path="/login">
           <LoginPage />
+        </Route>
+        <Route path="/checkout">
+          <CheckoutPage />
         </Route>
       </Switch>
 

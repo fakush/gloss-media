@@ -2,19 +2,19 @@ import {createContext, useState, useEffect} from 'react';
 
 export const orderContext = createContext([]);
 
-export default function AppContextProvider({children}){
+export function OrderContextProvider({children}){
     const [order, setOrder] = useState([]);
     const [orderTotal, setOrderTotal] = useState(0);
 
-    function isInOrder(id) {
-        return order.some((item) => item.id === id);
+    function isInOrder(code) {
+        return order.some((item) => item.code === code);
       }
 
-    function addToOrder({id, subCategory, title, quantity}) {
-        const isCurrentInOrder = isInOrder(id);
+    function addToOrder({code, region, zone, location, quantity}) {
+        const isCurrentInOrder = isInOrder(code);
     if (isCurrentInOrder) {
       const newOrder = order.map((item) => {
-        if (item.id === id) {
+        if (item.code === code) {
           return {
             ...item, quantity: quantity + item.quantity,
           }
@@ -23,14 +23,14 @@ export default function AppContextProvider({children}){
       })
       return setOrder([...newOrder])
     }
-    setOrder([...order, { id, subCategory, title, quantity }]);
+    setOrder([...order, { code, region, zone, location, quantity }]);
     }
 
-    function updateOrder({id, subCategory, title, quantity}) {
-        const isCurrentInOrder = isInOrder(id)
+    function updateOrder({code, region, zone, location, quantity}) {
+        const isCurrentInOrder = isInOrder(code)
         if (isCurrentInOrder) {
             const newOrder = order.map(item => {
-                if (item.id === id) {
+                if (item.code === code) {
                     return {
                         ...item, quantity: quantity
                     }
@@ -39,7 +39,7 @@ export default function AppContextProvider({children}){
             })
             return setOrder([...newOrder])
         }
-        setOrder([...order, {id, subCategory, title, quantity}])
+        setOrder([...order, {code, region, zone, location, quantity}])
     }
 
     function clearOrder(){
@@ -58,14 +58,21 @@ export default function AppContextProvider({children}){
 		Total();
 	}, [order]);
 
-    function handleRemove(id) {
-        const newOrder = order.filter((item) => item.id !== id);
+    function handleRemove(code) {
+        const newOrder = order.filter((item) => item.code !== code);
         setOrder(newOrder);
+    }
+
+    function presentInOrder(code) {
+        const newOrder = order.filter((item) => item.code === code);
+        var check = newOrder.length !== 0 ? true : false;
+        console.log(check)
+        return check
     }
 
     return (
         <orderContext.Provider value={
-            {order, setOrder, addToOrder, clearOrder, updateOrder, handleRemove, orderTotal,}}>{children}
+            {order, setOrder, addToOrder, clearOrder, updateOrder, handleRemove, presentInOrder, orderTotal,}}>{children}
         </orderContext.Provider>
     )
 }

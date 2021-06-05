@@ -7,7 +7,7 @@ export default function ItemsListComponent({items}) {
         <ListGroup variant="flush">
           {items.map((item) => {
             return (
-              <ItemRow key={item.Codigo} item={item} />
+              <ItemRow key={item.id} item={item} />
             );
           })}
         </ListGroup>

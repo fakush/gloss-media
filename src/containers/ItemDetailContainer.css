@@ -1,0 +1,25 @@
+.AddToBudgetBody{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.AddToBudgetTitleContainer{
+    display: flex;
+    align-items: flex-end;
+}
+
+.AddToBudgetTitle{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.CounterTitle{
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
