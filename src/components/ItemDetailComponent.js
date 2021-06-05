@@ -3,6 +3,7 @@ import "./ItemDetailComponent.css";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
+import Image from 'react-bootstrap/Image'
 import MapWidget from "../widgets/MapWidget";
 import ReferenciasWidget from "../widgets/ReferenciasWidget";
 
@@ -13,7 +14,8 @@ export default function ItemDetailComponent({ title, item, count }) {
       <Row className="ItemBody">
         <h6 className="BodyTextPill">{item.Ubicacion}</h6>
         <Col className="col-md-6 BodyImage">
-          <img src="https://picsum.photos/400/400" alt="Imagen" />
+        {/* <Image src={require(`../assets/img/Items/${item.Codigo}.jpg`)} alt="Imagen" fluid/> */}
+          <Image className="" src="https://picsum.photos/1000/1000" alt="Imagen" fluid/>
         </Col>
         <Col className="col-md-6">
           <Row className="BodyTextRow">

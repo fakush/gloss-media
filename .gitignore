@@ -26,3 +26,5 @@ yarn-debug.log*
 yarn-error.log*
 /src/assets/json
 /src/assets/json/JsonTestFile.json
+/src/assets/json/JsonFinal.json
+/src/assets/json/SegundaDB.json

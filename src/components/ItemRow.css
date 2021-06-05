@@ -1,0 +1,12 @@
+*{
+    font-size: 16px;
+}
+.ItemRowContainer{
+    display: flex;
+    flex-direction: row;
+}
+.EstiloTexto{
+    text-transform: capitalize;
+    font-family: "Raleway";
+    font-size: 14px;
+}

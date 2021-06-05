@@ -1,5 +1,6 @@
 import { db } from "./Firebase";
-const itemCollection = db.collection("test_db3");
+const itemCollection = db.collection("db_06_2021");
+let filteredCollection = itemCollection;
 
 export function getItems() {
   return itemCollection.get().then((snapshot) => {
@@ -7,14 +8,20 @@ export function getItems() {
   });
 }
 
-export function getItemsByCategory(subCategory) {
-  return itemCollection.where("campoCategoria", "==", `${subCategory}`).get().then((snapshot) => {
+export function getFilteredItems(data) {
+  console.log(data);
+  data[0] !== "Referencias" ? (filteredCollection = filteredCollection.where(
+    `${data[0]}`, "==", `${data[1]}`)
+        ) : (filteredCollection = filteredCollection.where(
+        "Referencias", "array-contains", `${data[1]}`
+      ));
+  return filteredCollection.get().then((snapshot) => {
     return snapshot.docs.map((doc) => doc.data());
   });
 }
 
 export function getItemById(id) {
   return itemCollection.where("Codigo", "==", `${id}`).get().then((snapshot) => {
-    return snapshot.docs.map(doc => doc.data());
-  });
+      return snapshot.docs.map((doc) => doc.data());
+    });
 }

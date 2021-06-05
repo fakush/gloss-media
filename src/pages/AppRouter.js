@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./Homepage";
 import NosotrosPage from './NosotrosPage';
 import NavBar from "../components/NavBar";
-import PlanificaPage from "./PlanificaPage";
+import ItemsListContainer from "../containers/ItemsListContainer";
+// import FilteredListContainer from "../containers/FilteredListContainer";
 import OhhPage from "./OhhPage";
 import LoginPage from "./LoginPage";
 import Footer from "../components/Footer";
@@ -20,7 +21,10 @@ export default function AppRouter() {
           <Homepage />
         </Route>
         <Route exact path="/planifica">
-          <PlanificaPage />
+          <ItemsListContainer />
+        </Route>
+        <Route path="/planifica/filtro/:id">
+          <ItemsListContainer />
         </Route>
         <Route path="/planifica/detalle/:id">
           <ItemDetailPage />
