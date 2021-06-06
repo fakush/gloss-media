@@ -43,7 +43,7 @@ export function AuthContextProvider({children}) {
     return auth.signOut();
   };
   
-  // todo: implementar password reset en segunda etapa del sitio
+  // todo: implementar password reset en proxima etapa
   // const passwordReset = (email) => {
   //   let promise = new Promise(function (resolve, reject) {
   //     auth

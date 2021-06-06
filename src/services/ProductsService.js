@@ -15,6 +15,7 @@ export function getFilteredItems(data) {
         ) : (filteredCollection = filteredCollection.where(
         "references", "array-contains", `${data[1]}`
       ));
+  console.log(filteredCollection)
   return filteredCollection.get().then((snapshot) => {
     return snapshot.docs.map((doc) => doc.data());
   });

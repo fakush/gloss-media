@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { orderContext } from '../contexts/OrderContext';
 
 export default function AddToOrderWidget({item}) {
-    const { order, presentInOrder, handleRemove } = useContext(orderContext);
+    const { presentInOrder, handleRemove } = useContext(orderContext);
 
     // todo: A implementar
     // function addToOrder() {

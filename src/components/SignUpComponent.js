@@ -71,11 +71,9 @@ export default function SignUpComponent() {
 
       </div>
 
-      
-
       <p>*Campos obligatorios</p>
       
-      {error && <Alert>{error}</Alert>}
+      {error && <Alert error={error}></Alert>}
 
     </Form>
   

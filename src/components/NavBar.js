@@ -5,7 +5,6 @@ import { Nav } from "react-bootstrap";
 import NavBarBrand from "../assets/img/navbar_brand.png";
 import { useHistory } from "react-router-dom";
 import LoginWidget from "../widgets/LoginWidget";
-import OrderWidget from "../widgets/OrderWidget";
 
 export default function NavBar() {
   const history = useHistory();
@@ -29,7 +28,6 @@ export default function NavBar() {
         </Nav>
         <Nav className="NavBar-Widgets">
             <LoginWidget />
-            <OrderWidget />
         </Nav>
       </Navbar.Collapse>
     </Navbar>
