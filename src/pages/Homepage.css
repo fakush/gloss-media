@@ -12,6 +12,12 @@
   font-weight: 400;
 }
 
+.HomPageOportunidadesText{
+  text-align: center;
+  font-weight: 600;
+  margin-top: 100px;
+}
+
 .HomeSearchButton {
   margin: auto;
   margin-top: 20px;

@@ -1,0 +1,91 @@
+
+.ItemBody{
+    margin: 10px;
+}
+
+.CardBody{
+    margin: 15px;
+}
+
+.BodyImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TitleTextPill{
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.BodyTextRow{
+    /* column-gap: 5px; */
+}
+
+.BodyTextPill{
+    margin-left: 2px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.MapPill{
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 300px;    
+}
+
+.MapPill div:first-child {
+    position: relative !important;
+    min-height: 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.Map{
+    border-radius: 5px;
+}
+
+.NotaTextPill{
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
+.SignInContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginFormGroup{
+    margin: 10px;
+}
+.LoginButtonDiv{
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px;
+}
+
+.RegisterButtonDiv{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.botonDefault1{
+    width: 130px;
+    height: 40px;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.11);
+    border-radius: 30px;
+    border: 2px solid #7879f1;
+    background-color: #7879f1;
+  }

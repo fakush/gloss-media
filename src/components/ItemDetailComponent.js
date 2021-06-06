@@ -15,8 +15,8 @@ export default function ItemDetailComponent({ item, count }) {
       <Row className="ItemBody">
         <h6 className="BodyTextPill">{item.location}</h6>
         <Col className="col-md-6 BodyImage">
-        {/* <Image src={require(`../assets/img/Items/${item.id}.jpg`)} alt="Imagen" fluid/> */}
-          <Image className="" src="https://picsum.photos/1000/1000" alt="Imagen" fluid/>
+        {/* <Image src={require(`../assets/img/items/${item.id}.jpg`)} alt="Imagen" fluid/> */}
+          <Image src="https://picsum.photos/1000/1000" alt="Imagen" fluid/>
         </Col>
         <Col className="col-md-6">
           <Row className="BodyTextRow">

@@ -26,7 +26,7 @@ export default function ItemDetailContainer({id}) {
       region: item.region, 
       zone: item.zone, 
       location: item.location, 
-      quantity: count,});
+      amount: count,});
     // history.goBack();
     history.push("/checkout");
   }

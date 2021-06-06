@@ -3,9 +3,12 @@ import "./SearchBarComponent.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
+import Button from 'react-bootstrap/Button';
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { useHistory } from "react-router-dom";
 
 export default function SeachBarComponent(props) {
+  let history = useHistory();
 
   return (
     <div className="SearchBarBody">
@@ -18,10 +21,11 @@ export default function SeachBarComponent(props) {
         <Col>Formato</Col>
         <Col>Acciones</Col>
         <Col>Referencias</Col>
+        <Col></Col>
       </Row>
       <Row>
         <Col>
-          <DropdownButton menuAlign="right" title="Seleccionar Región" id="dropdown-menu-align-right" {...props} >
+          <DropdownButton variant="secondary" menuAlign="right" title="Seleccionar Región" id="dropdown-menu-align-right" {...props} >
             <Dropdown.Item eventKey={["Region", "BUENOS AIRES"]}>BUENOS AIRES</Dropdown.Item>
             <Dropdown.Item eventKey={["Region", "CABA"]}>CABA</Dropdown.Item>
             <Dropdown.Item eventKey={["Region", "CHUBUT"]}>CHUBUT</Dropdown.Item>
@@ -40,7 +44,7 @@ export default function SeachBarComponent(props) {
           </DropdownButton>
         </Col>
         <Col>
-          <DropdownButton menuAlign="right" title="Seleccionar Zona" id="dropdown-menu-align-right" {...props}>
+          <DropdownButton variant="secondary" menuAlign="right" title="Seleccionar Zona" id="dropdown-menu-align-right" {...props}>
             <Dropdown.Item eventKey={["Zona", "ALMAGRO"]}>ALMAGRO</Dropdown.Item>
             <Dropdown.Item eventKey={["Zona", "BAHIA BLANCA"]}>BAHIA BLANCA</Dropdown.Item>
             <Dropdown.Item eventKey={["Zona", "BELGRANO"]}>BELGRANO</Dropdown.Item>
@@ -75,7 +79,7 @@ export default function SeachBarComponent(props) {
           </DropdownButton>
         </Col>
         <Col>
-          <DropdownButton menuAlign="right" title="Seleccionar Formato" id="dropdown-menu-align-right" {...props}>
+          <DropdownButton variant="secondary" menuAlign="right" title="Seleccionar Formato" id="dropdown-menu-align-right" {...props}>
             <Dropdown.Item eventKey={["Formato", "ASCENSORES"]}>ASCENSORES</Dropdown.Item>
             <Dropdown.Item eventKey={["Formato", "BANNERS"]}>BANNERS</Dropdown.Item>
             <Dropdown.Item eventKey={["Formato", "CAMION BACK"]}>CAMION BACK</Dropdown.Item>
@@ -93,14 +97,14 @@ export default function SeachBarComponent(props) {
           </DropdownButton>
         </Col>
         <Col>
-          <DropdownButton menuAlign="right" title="Seleccionar Acciones" id="dropdown-menu-align-right" {...props}>
+          <DropdownButton variant="secondary" menuAlign="right" title="Seleccionar Acciones" id="dropdown-menu-align-right" {...props}>
             <Dropdown.Item eventKey={["Acción", "COBERTURA"]}>COBERTURA</Dropdown.Item>
             <Dropdown.Item eventKey={["Acción", "FRECUENCIA"]}>FRECUENCIA</Dropdown.Item>
             <Dropdown.Item eventKey={["Acción", "IMPACTO"]}>IMPACTO</Dropdown.Item>
           </DropdownButton>
         </Col>
         <Col>
-          <DropdownButton menuAlign="right" title="Seleccionar Referencias" id="dropdown-menu-align-right" {...props}>
+          <DropdownButton variant="secondary" menuAlign="right" title="Seleccionar Referencias" id="dropdown-menu-align-right" {...props}>
             <Dropdown.Item eventKey={["Referencias", "Accesos"]}>ACCESOS</Dropdown.Item>
             <Dropdown.Item eventKey={["Referencias", "Alto Transito"]}>ALTO TRANSITO</Dropdown.Item>
             <Dropdown.Item eventKey={["Referencias", "Bares/Resto"]}>BARES RESTO</Dropdown.Item>
@@ -111,6 +115,9 @@ export default function SeachBarComponent(props) {
             <Dropdown.Item eventKey={["Referencias", "Supermercado"]}>SUPERMERCADO</Dropdown.Item>
             <Dropdown.Item eventKey={["Referencias", "Zona Comercial"]}>ZONA COMERCIAL</Dropdown.Item>
           </DropdownButton>
+        </Col>
+        <Col className="BotonBorrarFiltrosContainer">
+          <Button className="BotonBorrarFiltros" onClick={() => history.push(`/planifica/`)}>Borrar Filtros</Button>
         </Col>
       </Row>
     </div>

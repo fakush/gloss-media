@@ -10,36 +10,36 @@ export function OrderContextProvider({children}){
         return order.some((item) => item.code === code);
       }
 
-    function addToOrder({code, region, zone, location, quantity}) {
+    function addToOrder({code, region, zone, location, amount}) {
         const isCurrentInOrder = isInOrder(code);
     if (isCurrentInOrder) {
       const newOrder = order.map((item) => {
         if (item.code === code) {
           return {
-            ...item, quantity: quantity + item.quantity,
+            ...item, amount: amount + item.amount,
           }
         }
         return item
       })
       return setOrder([...newOrder])
     }
-    setOrder([...order, { code, region, zone, location, quantity }]);
+    setOrder([...order, { code, region, zone, location, amount }]);
     }
 
-    function updateOrder({code, region, zone, location, quantity}) {
+    function updateOrder({code, region, zone, location, amount}) {
         const isCurrentInOrder = isInOrder(code)
         if (isCurrentInOrder) {
             const newOrder = order.map(item => {
                 if (item.code === code) {
                     return {
-                        ...item, quantity: quantity
+                        ...item, amount: amount
                     }
                 }
                 return item
             })
             return setOrder([...newOrder])
         }
-        setOrder([...order, {code, region, zone, location, quantity}])
+        setOrder([...order, {code, region, zone, location, amount}])
     }
 
     function clearOrder(){
@@ -50,7 +50,7 @@ export function OrderContextProvider({children}){
 		const Total = () => {
 			let totalItems = 0;
 			for (const Item of order) {
-				totalItems += Item.quantity;
+				totalItems += Item.amount;
 			}
 			setOrderTotal(totalItems);
 			

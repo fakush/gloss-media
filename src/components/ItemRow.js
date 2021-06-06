@@ -19,8 +19,8 @@ export default function ItemRow({ item }) {
           <Col className="EstiloTexto">{item.region.toLowerCase()}</Col>
           <Col className="EstiloTexto">{item.zone.toLowerCase()}</Col>
           <Col className="EstiloTexto" lg="2">{item.location.toLowerCase()}</Col>
-          <Col className="EstiloTexto">{item.format}</Col>
-          <Col className="EstiloTexto">{item.action}</Col>
+          <Col className="EstiloTexto">{item.format.toLowerCase()}</Col>
+          <Col className="EstiloTexto">{item.action.toLowerCase()}</Col>
           <Col lg="2"><ReferenciasWidget referencias={item.references} /></Col>
           <Col className="EstiloTexto">$ {item.budget}.000</Col>
           <Col>

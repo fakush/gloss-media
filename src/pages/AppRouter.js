@@ -4,13 +4,13 @@ import Homepage from "./Homepage";
 import NosotrosPage from './NosotrosPage';
 import NavBar from "../components/NavBar";
 import ItemsListContainer from "../containers/ItemsListContainer";
-// import FilteredListContainer from "../containers/FilteredListContainer";
 import OhhPage from "./OhhPage";
 import LoginPage from "./LoginPage";
 import Footer from "../components/Footer";
 import ItemDetailPage from "./ItemDetailPage";
 import IdeasPage from "./IdeasPage";
 import CheckoutPage from './CheckoutPage';
+import SignUpPage from "./SignUpPage";
 
 export default function AppRouter() {
   return (
@@ -41,6 +41,9 @@ export default function AppRouter() {
         </Route>
         <Route path="/login">
           <LoginPage />
+        </Route>
+        <Route path="/signup">
+          <SignUpPage />
         </Route>
         <Route path="/checkout">
           <CheckoutPage />

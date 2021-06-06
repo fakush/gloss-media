@@ -10,13 +10,13 @@ export default function CounterWidget({ onAdd, showCounter, count }) {
     return (
         <Row className="CounterBlock">
             <Col className="CounterButton">
-                <Button variant="danger" onClick={() => onAdd(count - 1)}>-</Button>
+                <Button variant="secondary" onClick={() => onAdd(count - 1)}>-</Button>
             </Col>
             <Col className="CounterButton">
                 <Button variant="light">{count}</Button>
             </Col>
             <Col className="CounterButton">
-                <Button variant="success" onClick={() => onAdd(count + 1)}>+</Button>
+                <Button variant="secondary" onClick={() => onAdd(count + 1)}>+</Button>
             </Col>
         </Row>
     )

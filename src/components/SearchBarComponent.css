@@ -15,6 +15,10 @@
   display: flex;
   justify-content: flex-end;
 }
+.BotonBorrarFiltrosContainer{
+  display: flex;
+  justify-content: flex-end;
+}
 
 .BotonBorrarFiltros{
   width: 130px;
@@ -24,3 +28,4 @@
   border: 2px solid #7879f1;
   background-color: #7879f1;
 }
+
