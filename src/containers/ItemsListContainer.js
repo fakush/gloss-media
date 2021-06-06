@@ -9,15 +9,14 @@ const { getItems, getFilteredItems } = require('../services/ProductsService');
 
 export default function ItemsListContainer() {
     let {id} = useParams();
-    id === undefined ? id = "" : id = id.split(":");
     const [items, setItems] = useState([]);
     const history = useHistory();
 
     useEffect(() => {
-        id === "" ? (
+        id === undefined ? (
             getItems().then(data => setItems(data))
         ) : (
-            getFilteredItems(id).then(newData => {setItems(Object.values(newData))})
+            getFilteredItems(id.split(":")).then(newData => {setItems(Object.values(newData))})
         );
     }, [id])
 

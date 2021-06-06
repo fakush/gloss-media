@@ -14,14 +14,14 @@ export default function AddToOrderWidget({item}) {
         <>
             {
                 presentInOrder(item.id) === 0 ? (
-                    <Button className="botonDefault2" 
+                    <Button className="botonDefault2" variant="secondary"
                     // todo: A implementar
                     // onClick={addToOrder}
                     >
                         <span className="material-icons">turned_in_not</span>0
                     </Button>
                 ) : (
-                    <Button className="botonDefault2" onClick={() => handleRemove(item.id)}>
+                    <Button className="botonDefault2" variant="secondary" onClick={() => handleRemove(item.id)}>
                         <span className="material-icons">bookmark_remove</span>
                         {presentInOrder(item.id)}
                     </Button>
