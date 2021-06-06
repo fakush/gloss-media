@@ -25,10 +25,11 @@ export default function ItemDetailContainer({id}) {
       code: item.id, 
       region: item.region, 
       zone: item.zone, 
-      location: item.location, 
+      location: item.location,
+      format: item.format,
+      price: item.budget, 
       amount: count,});
-    // history.goBack();
-    history.push("/checkout");
+    history.goBack();
   }
 
   useEffect(() => {
@@ -48,15 +49,15 @@ export default function ItemDetailContainer({id}) {
   return (
     <div>
       <ItemDetailComponent item={item} count={count}/>
-      <Row className="AddToBudgetBody">
-        <Col className="AddToBudgetTitleContainer" xs lg="2">
-          <p className="AddToBudgetTitle">Añadir al presupuesto presupuesto</p>
+      <Row className="AddToOrderBody">
+        <Col className="AddToOrderTitleContainer" xs lg="2">
+          <p className="AddToOrderTitle">Añadir al presupuesto presupuesto</p>
           </Col>
         <Col xs lg="2">
           <p className="CounterTitle">Periodos</p>
           <CounterWidget onAdd={setCount} count={count} showCounter={showCounter} />
         </Col>
-        <Col className="AddToBudgetTitleContainer" xs lg="2">
+        <Col className="AddToOrderTitleContainer" xs lg="2">
           {count > 0 && (<Button className="BotonMasInfo" onClick={onAdd}>Ok</Button>)}
         </Col>
       </Row>

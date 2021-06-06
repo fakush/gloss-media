@@ -1,0 +1,17 @@
+.ResumeCardBody{
+    margin: 50px;
+    padding: 20px;
+}
+
+.ResumeTextPill{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: 600;
+}

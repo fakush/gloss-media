@@ -9,12 +9,12 @@ export default function OportunidadesCard({item}) {
   
   return (
       <Card className="Card">
-        <Card.Img variant="top" src="https://picsum.photos/400/300" />
+        <Card.Img variant="top" src={`/img/${item.id}.png`} />
         <Card.Body className="CardBody">
           <Card.Text>
-              Region: {item.region} <br />
-              Zona: {item.zone}<br />
-              Dirección: {item.location}<br />
+              Region: {item.region.toLowerCase()} <br />
+              Zona: {item.zone.toLowerCase()}<br />
+              Dirección: {item.location.toLowerCase()}<br />
           </Card.Text>
           <Button className="BotonMasInfo" onClick={() => history.push(`/planifica/detalle/${item.id}`)}>+ Info</Button>
         </Card.Body>

@@ -5,6 +5,7 @@
 }
 .CardBody {
   display: flex;
+  align-items: flex-end;
   font-size: 10px;
   column-gap: 5px;
   text-transform: capitalize;

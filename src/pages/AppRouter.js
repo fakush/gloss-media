@@ -11,8 +11,11 @@ import ItemDetailPage from "./ItemDetailPage";
 import IdeasPage from "./IdeasPage";
 import CheckoutPage from './CheckoutPage';
 import SignUpPage from "./SignUpPage";
+import { useAuth } from '../contexts/AuthContext';
 
 export default function AppRouter() {
+  const { currentUser } = useAuth();
+  
   return (
     <Router>
       <NavBar />
@@ -22,13 +25,13 @@ export default function AppRouter() {
           <Homepage />
         </Route>
         <Route exact path="/planifica">
-          <ItemsListContainer />
+          {currentUser !== null ? <ItemsListContainer /> : <LoginPage />}
         </Route>
         <Route path="/planifica/filtro/:id">
-          <ItemsListContainer />
+          {currentUser !== null ? <ItemsListContainer /> : <LoginPage />}
         </Route>
         <Route path="/planifica/detalle/:id">
-          <ItemDetailPage />
+          {currentUser !== null ? <ItemDetailPage /> : <LoginPage />}
         </Route>
         <Route path="/ohh">
           <OhhPage />
@@ -46,7 +49,7 @@ export default function AppRouter() {
           <SignUpPage />
         </Route>
         <Route path="/checkout">
-          <CheckoutPage />
+          {currentUser !== null ? <CheckoutPage /> : <LoginPage />}
         </Route>
       </Switch>
 

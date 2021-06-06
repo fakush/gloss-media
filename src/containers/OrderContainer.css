@@ -1,0 +1,21 @@
+.OrderButtonBar{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: flex-end;
+}
+
+.OrderButton{
+    border: 2px solid #7879f1;
+    background-color: #7879f1;
+  }
+
+  .OrderButtons{
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+  }

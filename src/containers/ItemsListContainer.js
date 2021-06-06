@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import ItemListHeader from '../components/ItemListHeader';
 import ItemsListComponent from '../components/ItemsListComponent';
 import SeachBarComponent from '../components/SeachBarComponent';
 
@@ -28,6 +29,7 @@ export default function ItemsListContainer() {
     return (
         <div>
             <SeachBarComponent onSelect={handleSelection} />
+            <ItemListHeader />
             <ItemsListComponent items={items} />
         </div>
     )
