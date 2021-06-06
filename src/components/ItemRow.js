@@ -24,7 +24,7 @@ export default function ItemRow({ item }) {
           <Col lg="2"><ReferenciasWidget referencias={item.references} /></Col>
           <Col className="EstiloTexto">$ {item.budget}.000</Col>
           <Col>
-            <Button className="BotonMasInfo" onClick={() => history.push(`/planifica/detalle/${item.id}`)}>+ Info</Button>
+            <Button className="BotonMasInfo" variant="secondary" onClick={() => history.push(`/planifica/detalle/${item.id}`)}>+ Info</Button>
           </Col>
       </Row>
     </ListGroup.Item>

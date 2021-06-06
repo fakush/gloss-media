@@ -16,7 +16,7 @@ export default function OportunidadesCard({item}) {
               Zona: {item.zone.toLowerCase()}<br />
               Dirección: {item.location.toLowerCase()}<br />
           </Card.Text>
-          <Button className="BotonMasInfo" onClick={() => history.push(`/planifica/detalle/${item.id}`)}>+ Info</Button>
+          <Button className="BotonMasInfo" variant="secondary" onClick={() => history.push(`/planifica/detalle/${item.id}`)}>+ Info</Button>
         </Card.Body>
       </Card>
   );

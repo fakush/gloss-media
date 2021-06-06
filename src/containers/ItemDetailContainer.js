@@ -58,7 +58,7 @@ export default function ItemDetailContainer({id}) {
           <CounterWidget onAdd={setCount} count={count} showCounter={showCounter} />
         </Col>
         <Col className="AddToOrderTitleContainer" xs lg="2">
-          {count > 0 && (<Button className="BotonMasInfo" onClick={onAdd}>Ok</Button>)}
+          {count > 0 && (<Button className="BotonMasInfo" variant="secondary" onClick={onAdd}>Ok</Button>)}
         </Col>
       </Row>
     </div>

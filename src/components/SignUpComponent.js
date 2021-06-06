@@ -65,7 +65,7 @@ export default function SignUpComponent() {
         </Form.Text>
       </Form.Group>
       <div className="LoginButtonDiv">
-      <Button className="botonDefault1" variant="primary" type="submit" disabled={loading}>
+      <Button className="botonDefault1" variant="secondary" type="submit" disabled={loading}>
         Registrarse
       </Button>
 

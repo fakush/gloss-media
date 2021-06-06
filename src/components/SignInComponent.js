@@ -48,7 +48,7 @@ export default function SignInComponent() {
                 <Form.Control type="password" placeholder="****" ref={passwordRef}/>
               </Form.Group>
               <div className="LoginButtonDiv">
-                <Button className="botonDefault1" variant="primary" type="submit" disabled={loading} >
+                <Button className="botonDefault1" variant="secondary" type="submit" disabled={loading} >
                   Ingresar
                 </Button>
               </div>

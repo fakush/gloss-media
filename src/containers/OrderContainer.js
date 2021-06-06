@@ -1,31 +1,31 @@
 import React, { useContext, useState } from "react";
 import './OrderContainer.css'
 import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import { useHistory } from "react-router-dom";
 import OrderListComponent from "../components/OrderListComponent";
 import { orderContext } from "../contexts/OrderContext";
 import OrderContainerHeader from "../components/OrderContainerHeader";
 import OrderResumeComponent from "../components/OrderResumeComponent";
+import { useAuth } from '../contexts/AuthContext';
 
 export default function OrderContainer() {
   const { order, clearOrder, orderTotal } = useContext(orderContext);
+  const { currentUser } = useAuth();
   const { sendOrderService } = require("../services/OrderService");
   const [ docRef, setDocRef ] = useState('')
   const [showModal, setShowModal] = useState(false);
   const history = useHistory();
-  //Todo: Pasar acá los datos del usuario.
-  const hardcodedBuyerData = {name: "RevisarCorreo", email: "pepe@pepe.com", phone: 55555555,};
+  //Todo: Hay datos harcodeados hasta terminar el login.
+  const clientData = {name: "RevisarCorreo", email: currentUser.email, phone: 55555555,};
 
   const handleCloseModal = () => setShowModal(false);
   
   function sendOrder() {
-    sendOrderService(hardcodedBuyerData, order, orderTotal)
+    sendOrderService(clientData, order, orderTotal)
         .then(res => setDocRef(res),
         setShowModal(true));
-        // clearOrder();
-        // history.push("/");
+        clearOrder();
   }
 
   return (
@@ -45,7 +45,7 @@ export default function OrderContainer() {
         </Button>
       </div>
       <Modal show={showModal} onHide={handleCloseModal}>
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>Pedido Realizado</Modal.Title>
           </Modal.Header>
 

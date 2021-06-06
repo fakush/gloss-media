@@ -117,7 +117,7 @@ export default function SeachBarComponent(props) {
           </DropdownButton>
         </Col>
         <Col className="BotonBorrarFiltrosContainer">
-          <Button className="BotonBorrarFiltros" onClick={() => history.push(`/planifica/`)}>Borrar Filtros</Button>
+          <Button className="BotonBorrarFiltros" variant="secondary" onClick={() => history.push(`/planifica/`)}>Borrar Filtros</Button>
         </Col>
       </Row>
     </div>

@@ -22,7 +22,7 @@ export default function ItemListHeader() {
           <Col lg="2">Referencias</Col>
           <Col className="EstiloTexto">Precio/Periodo</Col>
           <Col>
-            <Button className="BotonMasInfo" onClick={() => history.push(`/checkout`)}>Presupuestar</Button>
+            <Button className="BotonMasInfo" variant="secondary" onClick={() => history.push(`/checkout`)}>Presupuestar</Button>
           </Col>
       </Row>
       </ListGroup.Item>
