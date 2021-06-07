@@ -4,6 +4,7 @@ let filteredCollection = itemCollection;
 
 export function getItems() {
   return itemCollection.get().then((snapshot) => {
+    filteredCollection = itemCollection;
     return snapshot.docs.map((doc) => doc.data());
   });
 }
