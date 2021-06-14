@@ -16,8 +16,8 @@ node.js
 
 ### Instalación 🔧
 
-_Una vez clonado el repositorio y con los archivos de imagenes y variables de entorno descargados e isntalados_
-_Nos paramos en la carpeta raiz y ejecutamos el comandos_
+_Una vez clonado el repositorio y con los archivos de imagenes y variables de entorno descargados e isntalados en el directorio raiz del proyecto._
+_Abrimos la terminal de comandos en esta carpeta y ejecutamos los siguientes comandos_
 
 
 ```
