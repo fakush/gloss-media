@@ -8,6 +8,8 @@ import { orderContext } from "../contexts/OrderContext";
 import OrderContainerHeader from "../components/OrderContainerHeader";
 import OrderResumeComponent from "../components/OrderResumeComponent";
 import { useAuth } from '../contexts/AuthContext';
+import modalImage from '../assets/img/logo_modal.png'
+import Image from "react-bootstrap/Image";
 
 export default function OrderContainer() {
   const { order, clearOrder, orderTotal } = useContext(orderContext);
@@ -45,16 +47,20 @@ export default function OrderContainer() {
         </Button>
       </div>
       <Modal show={showModal} onHide={handleCloseModal}>
-          <Modal.Header>
+          {/* <Modal.Header>
             <Modal.Title>Pedido Realizado</Modal.Title>
-          </Modal.Header>
-
+          </Modal.Header> */}
           <Modal.Body>
-            <p>Su numero de pedido es: {docRef}</p>
+            <p className="textoModal">Tu propuesta se genero con exito!</p>
+            <div className="imagenModal">
+              <Image src={modalImage} />
+            </div>
+            <p className="textoModal">En breve nos pondremos en contacto</p>
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseModal}>Close</Button>
+            <p>Su numero de pedido es: {docRef}</p>
+            <Button variant="secondary" onClick={handleCloseModal}>Salir</Button>
           </Modal.Footer>
         </Modal>
     </div>

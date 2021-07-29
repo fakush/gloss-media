@@ -19,3 +19,14 @@
     justify-content: space-between;
     column-gap: 10px;
   }
+
+  .textoModal{
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagenModal{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }

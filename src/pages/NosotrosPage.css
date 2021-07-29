@@ -1,0 +1,28 @@
+.AreaQuienesSomos {
+  margin: 15px;
+}
+.TituloQuienesSomos {
+  font-weight: bold;
+  text-align: end;
+  padding-right: 25px;
+  margin-bottom: 15px;
+}
+.ImagenQuienesSomos {
+  padding: 10px;
+}
+
+.AreaNuestrosServicios {
+  margin: 15px;
+  margin-top: 30px;
+}
+
+.TituloNuestrosServicios {
+  font-weight: bold;
+  text-align: start;
+  margin-bottom: 5px;
+  padding-left: 35px;
+}
+
+.ImagenNuestrosServicios {
+  padding: 25px;
+}
