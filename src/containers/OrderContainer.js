@@ -64,6 +64,8 @@ export default function OrderContainer() {
           <span className='material-icons'>send</span> Solicitar presupuesto
         </Button>
       </div>
+
+      {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>
         {/* <Modal.Header>
             <Modal.Title>Pedido Realizado</Modal.Title>

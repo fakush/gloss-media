@@ -1,17 +1,20 @@
-*{
-    font-size: 16px;
+* {
+  font-size: 16px;
 }
-.ItemRowContainer{
-    display: flex;
-    flex-direction: row;
+.ItemRowContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
-.EstiloTexto{
-    text-transform: capitalize;
-    font-family: "Raleway";
-    font-size: 14px;
+.EstiloTexto {
+  text-transform: capitalize;
+  font-family: 'Raleway';
+  font-size: 14px;
+  text-align: start;
 }
 
-.botonDefault2{
+.botonDefault2 {
   box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.11);
   border: 2px solid #7879f1;
   background-color: #7879f1;

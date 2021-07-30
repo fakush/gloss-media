@@ -8,7 +8,7 @@ export default function OportunidadesCard({ item }) {
   const history = useHistory();
 
   return (
-    <Card className='Card' xs={12} md={3}>
+    <Card className='Card'>
       <Card.Img variant='top' src={`/img/${item.id}.png`} />
       <Card.Body className='CardBody'>
         <Card.Text>

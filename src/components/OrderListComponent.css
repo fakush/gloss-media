@@ -1,16 +1,16 @@
 .OrderListContainer {
-  margin: 50px;
+  margin: 5%;
 }
 
-.OrderTitleBar{
+.OrderTitleBar {
   font-weight: 600;
 }
 
-.OrderTitleRow{
+.OrderTitleRow {
   background-color: darkgray;
 }
 
-.BotonQuitar{
+.BotonQuitar {
   display: flex;
   justify-content: flex-end;
 }

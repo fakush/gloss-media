@@ -1,7 +1,7 @@
-.SearchBarBody{
-    margin: 0;
-    padding: 30px;
-    background-color: #E5E5E5;
+.SearchBarBody {
+  margin: 0;
+  padding: 30px;
+  background-color: #e5e5e5;
 }
 
 .SearchBarText {
@@ -10,16 +10,33 @@
   font-weight: 500;
 }
 
-.BotonBorrarFiltrosContainer{
+.SearchBarBotonera {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.SearchBarCol {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: fit-content;
+}
+
+.SearchBarColTitle {
+  margin-bottom: 5px;
+}
+.BotonBorrarFiltrosContainer {
   display: flex;
   justify-content: flex-end;
 }
-.BotonBorrarFiltrosContainer{
+.BotonBorrarFiltrosContainer {
   display: flex;
   justify-content: flex-end;
 }
 
-.BotonBorrarFiltros{
+.BotonBorrarFiltros {
   width: 130px;
   height: 40px;
   box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.11);
@@ -27,4 +44,3 @@
   border: 2px solid #7879f1;
   background-color: #7879f1;
 }
-

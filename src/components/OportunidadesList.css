@@ -1,5 +1,7 @@
-.CardDeck {
-    margin-top: 35px;
-    display: flex;
-    justify-content: space-around;
+.CardRow {
+  margin-top: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
 }

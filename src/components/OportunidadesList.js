@@ -1,16 +1,14 @@
-import React from "react";
+import React from 'react';
 import './OportunidadesList.css';
-import OportunidadesCard from "./OportunidadesCard";
-import CardDeck from 'react-bootstrap/CardDeck'
+import OportunidadesCard from './OportunidadesCard';
+import { Row } from 'react-bootstrap';
 
-export default function OportunidadesList({items}) {
+export default function OportunidadesList({ items }) {
   return (
-    <CardDeck className="CardDeck">
-        {items.map((item) => {
-            return (
-                <OportunidadesCard key={item.id} item={item} />
-            )
-        })}
-    </CardDeck>
+    <Row className='CardRow' s={1} md={2} lg={4}>
+      {items.map((item) => {
+        return <OportunidadesCard key={item.id} item={item} />;
+      })}
+    </Row>
   );
 }
