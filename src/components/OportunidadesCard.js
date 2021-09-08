@@ -9,7 +9,7 @@ export default function OportunidadesCard({ item }) {
 
   return (
     <Card className='Card'>
-      <Card.Img variant='top' src={`/img/${item.id}.png`} />
+      <Card.Img variant='top' src={`/img/${item.id}.jpg`} />
       <Card.Body className='CardBody'>
         <Card.Text>
           Region: {item.region.toLowerCase()} <br />
