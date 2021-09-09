@@ -1,5 +1,5 @@
-import { db } from "./Firebase";
-const itemCollection = db.collection("gloss_db");
+import { db } from './Firebase';
+const itemCollection = db.collection('glossmedia_db');
 let filteredCollection = itemCollection;
 
 export function getItems() {
@@ -11,19 +11,20 @@ export function getItems() {
 
 export function getFilteredItems(data) {
   console.log(data);
-  data[0] !== "Referencias" ? (filteredCollection = filteredCollection.where(
-    `${data[0]}`, "==", `${data[1]}`)
-        ) : (filteredCollection = filteredCollection.where(
-        "references", "array-contains", `${data[1]}`
-      ));
-  console.log(filteredCollection)
+  data[0] !== 'Referencias'
+    ? (filteredCollection = filteredCollection.where(`${data[0]}`, '==', `${data[1]}`))
+    : (filteredCollection = filteredCollection.where('references', 'array-contains', `${data[1]}`));
+  console.log(filteredCollection);
   return filteredCollection.get().then((snapshot) => {
     return snapshot.docs.map((doc) => doc.data());
   });
 }
 
 export function getItemById(id) {
-  return itemCollection.where("id", "==", `${id}`).get().then((snapshot) => {
+  return itemCollection
+    .where('id', '==', `${id}`)
+    .get()
+    .then((snapshot) => {
       return snapshot.docs.map((doc) => doc.data());
     });
 }

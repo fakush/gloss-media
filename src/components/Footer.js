@@ -18,12 +18,11 @@ export default function Footer() {
   const emailRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => setShowModal(false);
-  let email = '';
 
   const sendSubscription = (e) => {
     e.preventDefault();
-    email = emailRef.current.value;
-    sendSuscriptionService(email).then((res) => setDocRef(res), setShowModal(true));
+    const email = emailRef.current.value;
+    sendSuscriptionService(email).then((res) => setDocRef(email), setShowModal(true));
   };
 
   return (
@@ -106,7 +105,7 @@ export default function Footer() {
         </Modal.Body>
 
         <Modal.Footer>
-          <p>Se a añadido a nuestra lista: {email}</p>
+          <p>Se a añadido a nuestra lista: {docRef}</p>
           <Button variant='secondary' onClick={handleCloseModal}>
             Salir
           </Button>
