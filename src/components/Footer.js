@@ -30,7 +30,7 @@ export default function Footer() {
       <Row className='FooterGlobals'>
         <hr />
         <Col className='FooterLinks col-4'>
-          <div className='FooterLinksRow' style={{ 'align-items': '  flex-end' }}>
+          <div className='FooterLinksRow' style={{ alignItems: '  flex-end' }}>
             <a href='https://www.instagram.com/glossideas/' target='_blank' rel='noreferrer'>
               <img className='SocialWidgetIcon' src={SocialWidgetInstagram} alt='Instagram' />
             </a>

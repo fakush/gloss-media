@@ -28,7 +28,7 @@ export default function ItemRow({ item }) {
         <Col className='EstiloTexto' sm='1' lg='2'>
           <ReferenciasWidget referencias={item.references} />
         </Col>
-        <Col className='EstiloTexto'>$ {item.budget}.000</Col>
+        <Col className='EstiloTexto'>$ {item.budget}</Col>
         <Col>
           <Button
             className='BotonMasInfo'

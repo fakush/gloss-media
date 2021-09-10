@@ -5,25 +5,34 @@ class MapWidget extends React.Component {
   render() {
     const mapStyles = {
       width: '100%',
-      height: '100%',
+      height: '300px',
     };
 
-    const latitude = parseFloat(this.props.Latitud);
-    const longitude = parseFloat(this.props.Longitud);
-    console.log(latitude);
-    console.log(longitude);
+    let latitude = this.props.Latitud;
+    let longitude = this.props.Longitud;
+    if (latitude[latitude.length - 4] === '.') {
+      const dotPosition = latitude.length - 4;
+      latitude = latitude.slice(0, dotPosition) + latitude.slice(dotPosition + 1);
+    }
+    if (longitude[longitude.length - 4] === '.') {
+      const dotPosition = longitude.length - 4;
+      longitude = longitude.slice(0, dotPosition) + longitude.slice(dotPosition + 1);
+    }
+
     return (
-      <Map
-        google={this.props.google}
-        zoom={15}
-        style={mapStyles}
-        containerStyle={{ position: 'relative' }}
-        className='Map'
-        disableDefaultUI={true}
-        center={{ lat: { latitude }, lng: { longitude } }}
-      >
-        <Marker position={{ lat: { latitude }, lng: { longitude } }} />
-      </Map>
+      <div>
+        <Map
+          google={this.props.google}
+          zoom={17}
+          style={mapStyles}
+          containerStyle={{ position: 'relative' }}
+          className='Map'
+          disableDefaultUI={true}
+          initialCenter={{ lat: latitude, lng: longitude }}
+        >
+          <Marker position={{ lat: latitude, lng: longitude }} />
+        </Map>
+      </div>
     );
   }
 }

@@ -6,8 +6,10 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import MapWidget from '../widgets/MapWidget';
 import ReferenciasWidget from '../widgets/ReferenciasWidget';
+import MapWidget2 from '../widgets/MapWidget2';
 
 export default function ItemDetailComponent({ item, count }) {
+  console.log(item.latitude);
   return (
     <Card className='CardBody'>
       <h6 className=''>Código: {item.id}</h6>
@@ -38,7 +40,7 @@ export default function ItemDetailComponent({ item, count }) {
               <h6 className='BodyTextPill'>Segmento: {item.segment}</h6>
             </div>
             <div className='col-md-6'>
-              <h6 className='BodyTextPill'>Presupuesto: ${item.budget}.000</h6>
+              <h6 className='BodyTextPill'>Presupuesto: ${item.budget}</h6>
             </div>
           </Row>
           <Row>
